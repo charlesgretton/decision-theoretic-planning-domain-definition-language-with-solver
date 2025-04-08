@@ -1,0 +1,33 @@
+(define (problem cogx-dt-task-0)
+
+(:domain cogx-dt-domain-0)
+
+(:objects  robot_0__e - robot
+           place_0__d - place
+           person0 - person
+)
+
+(:init  ;; (associated-room person1 room_0__t)
+        ;; (does-exist person0 true)
+        (in-room place_0__d room_0__t)
+        (is-in person0 place_0__d)
+        (is-in robot_0__e place_0__d)
+	
+        ;; (is-virtual person1)
+        (placestatus place_0__d trueplace)
+        (probabilistic  0.0909000000000000  (and  (category room_0__t anteroom)
+                                                  (category room_0__t anteroom)
+                                            )
+                        0.0909000000000000  (and  (category room_0__t singleoffice)
+                                                  (category room_0__t singleoffice)
+                                            )
+                        0.0909000000000000  (and  (category room_0__t hallway)
+                                                  (category room_0__t hallway)
+                                            )
+        )
+)
+
+(:goal  (and  ))
+(:metric maximize (reward ))
+
+)
